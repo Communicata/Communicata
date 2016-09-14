@@ -6,9 +6,27 @@
  * Time: 2:56 PM
  */
 
-function bot_send_help($author) {
-  $pm = $author->getPrivateChannel();
-  $pm->sendMessage("Hi!");
+function bot_set_help() {
+  $response = '```markdown';
+  $response .= "\n";
+  $response .= "#Available Commands:";
+  $response .= "\n";
+  $response .= "\n";
+  $response .= "-e Roll <number>: Returns result between 1 and <number>. Example; '-e roll 100'";
+  $response .= "\n";
+  $response .= "\n";
+  $response .= "-e dice <dice and modifier>: Returns results of <dice>. Example '-e dice 2d4 +6'";
+  $response .= "\n";
+  $response .= "\n";
+  $response .= "-e choice <choice1; choice2; choice3; ...>: Returns a random choice from provided options. Example; '-e choice Chinese; Pizza; Chicken;'";
+  $response .= "\n";
+  $response .= "\n";
+  $response .= "-e 8ball: Try your luck and ask the bot a question. Example '-e Hey bot, Should I order takeout?'";
+  $response .= "\n";
+  $response .= "\n";
+  $response .= '```';
+
+  return $response;
 }
 
 function bot_roll($contents) {
