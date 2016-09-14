@@ -7,14 +7,15 @@ $discord = new \Discord\Discord([
     'token' => '',
 ]);
 
-
 $discord->on('ready', function ($discord) {
     echo "Bot is ready.", PHP_EOL;
+  $discord->username = "Ember";
+  $discord->save();
 
     // Listen for events here
     $discord->on('message', function ($message) {
         echo "Recieved a message from {$message->author->username}: {$message->content}", PHP_EOL;
-      
+
       // Command Triggers
       if (strpos($message->content, '-e') === 0) {
         echo "Ember command triggered", PHP_EOL;
@@ -22,6 +23,9 @@ $discord->on('ready', function ($discord) {
         switch(preg_replace('/[^\da-z]/i', '', $contents[1])) {
           case 'help':
             $response = bot_set_help($message->author);
+            $message->reply("A list of available commands has been sent to your Private Messages");
+            $author = $message->author->user;
+            $author->sendMessage("$response");
             break;
           case 'roll':
             echo "Triggering roll", PHP_EOL;
