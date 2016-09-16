@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fd6d0ad9e7ab1fbfaa8b0c344eec9368",
-    "content-hash": "9f49a04d0ba299329b3d18f7b7602f2c",
+    "hash": "1aacb9cad93fe7dcfb6a86ca2f654abd",
+    "content-hash": "4a0b0af0401ce4e5a1fce1b4e8827809",
     "packages": [
         {
             "name": "TrafficCophp/ByteBuffer",
@@ -1238,16 +1238,16 @@
         },
         {
             "name": "react/http-client",
-            "version": "v0.4.10",
+            "version": "v0.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/http-client.git",
-                "reference": "1a37937274cc7bf7ef194381c83f5a4ad5253575"
+                "reference": "4d367ff9909954bafe6a04762ec68e6b1e12bcf8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/http-client/zipball/1a37937274cc7bf7ef194381c83f5a4ad5253575",
-                "reference": "1a37937274cc7bf7ef194381c83f5a4ad5253575",
+                "url": "https://api.github.com/repos/reactphp/http-client/zipball/4d367ff9909954bafe6a04762ec68e6b1e12bcf8",
+                "reference": "4d367ff9909954bafe6a04762ec68e6b1e12bcf8",
                 "shasum": ""
             },
             "require": {
@@ -1261,11 +1261,6 @@
                 "react/stream": "0.4.*"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.5-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "React\\HttpClient\\": "src"
@@ -1279,7 +1274,7 @@
             "keywords": [
                 "http"
             ],
-            "time": "2016-03-21 14:01:16"
+            "time": "2016-09-15 20:59:05"
         },
         {
             "name": "react/partial",
@@ -1495,6 +1490,59 @@
             "time": "2016-08-22 09:51:07"
         },
         {
+            "name": "sergej-kurakin/diceroller",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sergej-kurakin/dicecalc.git",
+                "reference": "3af4edaa3005733f5f2a3e3606b2bc3869b43016"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sergej-kurakin/dicecalc/zipball/3af4edaa3005733f5f2a3e3606b2bc3869b43016",
+                "reference": "3af4edaa3005733f5f2a3e3606b2bc3869b43016",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "@stable",
+                "jakub-onderka/php-parallel-lint": "^0.9.2",
+                "pdepend/pdepend": "@stable",
+                "phploc/phploc": "@stable",
+                "phpmd/phpmd": "@stable",
+                "phpunit/phpunit": "@stable",
+                "sebastian/phpcpd": "@stable",
+                "sebastian/phpdcd": "@stable",
+                "squizlabs/php_codesniffer": "@stable"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DiceCalc\\": "src/DiceCalc"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Owen Winkler",
+                    "email": "a_github@midnightcircus.com"
+                }
+            ],
+            "description": "Dice Roller, PSR compatible fork from https://github.com/ringmaster/dicecalc",
+            "keywords": [
+                "dice",
+                "dice calc",
+                "dice calculator",
+                "dice roller"
+            ],
+            "time": "2016-05-29 07:44:14"
+        },
+        {
             "name": "symfony/options-resolver",
             "version": "v3.1.4",
             "source": {
@@ -1670,6 +1718,69 @@
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
             "time": "2016-08-05 08:37:39"
+        },
+        {
+            "name": "symfony/var-dumper",
+            "version": "v3.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/var-dumper.git",
+                "reference": "62ee73706c421654a4c840028954510277f7dfc8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/62ee73706c421654a4c840028954510277f7dfc8",
+                "reference": "62ee73706c421654a4c840028954510277f7dfc8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9",
+                "symfony/polyfill-mbstring": "~1.0"
+            },
+            "require-dev": {
+                "twig/twig": "~1.20|~2.0"
+            },
+            "suggest": {
+                "ext-symfony_debug": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "Resources/functions/dump.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Component\\VarDumper\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony mechanism for exploring and dumping PHP variables",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "debug",
+                "dump"
+            ],
+            "time": "2016-08-31 09:05:42"
         },
         {
             "name": "team-reflex/discord-php",

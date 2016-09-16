@@ -67,12 +67,6 @@ function bot_dice($contents) {
   }
    */
 
-  require_once __DIR__ . '/dicecalc/src/DiceCalc/Calc.php';
-  require_once __DIR__ . '/dicecalc/src/DiceCalc/CalcSet.php';
-  require_once __DIR__ . '/dicecalc/src/DiceCalc/CalcDice.php';
-  require_once __DIR__ . '/dicecalc/src/DiceCalc/CalcOperation.php';
-  require_once __DIR__ . '/dicecalc/src/DiceCalc/Random.php';
-
   unset($contents[0], $contents[1]);
   $expression = implode(' ', $contents);
   $calc = new \DiceCalc\Calc($expression);

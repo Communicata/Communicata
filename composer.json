@@ -1,6 +1,8 @@
 {
     "name": "timhouseman/ember",
     "require": {
-        "team-reflex/discord-php": "^4.0"
+        "team-reflex/discord-php": "^4.0",
+        "sergej-kurakin/diceroller": "^2.0",
+        "symfony/var-dumper": "^3.1"
     }
 }
