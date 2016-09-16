@@ -12,9 +12,9 @@ $discord = new \Discord\Discord([
 
 $discord->on('ready', function ($discord) {
     echo "Bot is ready.", PHP_EOL;
-  $discord->username = "Ember";
-  $discord->save();
-  print_r($discord->guilds);
+    !empty($config['bot_nick']) ? $discord->username = $config['bot_nick'] : false;
+    $discord->save();
+    print_r($discord->guilds);
 
     // Listen for events here
     $discord->on('message', function ($message) {
@@ -54,13 +54,13 @@ $discord->on('ready', function ($discord) {
         }
       }
     });
-  $discord->on(\Discord\WebSockets\Event::GUILD_MEMBER_ADD, function ($info) use ($discord) {
-    echo "New user joined";
-    $user = $info->user;
-    print_r($user);
+    $discord->on(\Discord\WebSockets\Event::GUILD_MEMBER_ADD, function ($info) use ($discord) {
+      echo "New user joined";
+      $user = $info->user;
+      print_r($user);
 
-    //stuff here
-  });
+      //stuff here
+    });
 });
 
 $discord->run();
