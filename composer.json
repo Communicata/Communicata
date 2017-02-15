@@ -1,8 +1,16 @@
 {
-    "name": "timhouseman/ember",
+    "name": "drakythe/ember",
     "require": {
+        "eclipsegc/plugins_annotation": "^0.1.1",
         "team-reflex/discord-php": "^4.0",
         "sergej-kurakin/diceroller": "^2.0",
+        "symfony/dependency-injection": "^3.2",
+        "symfony/config": "^3.2",
         "symfony/var-dumper": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Drakythe\\Ember\\": "src/"
+        }
     }
 }

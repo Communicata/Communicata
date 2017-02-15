@@ -1,6 +1,6 @@
 <?php
 
-$config = [
+return [
   'token' => '',
   'bot_nick' => '',
   'greeting' => '',
