@@ -36,3 +36,4 @@ abstract class CommandBase implements CommandInterface {
   }
 
 }
+

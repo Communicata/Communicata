@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains \Drakythe\Ember\Bootstrap.
- */
-
 namespace Drakythe\Ember;
 
 use Symfony\Component\Config\FileLocator;
@@ -24,3 +19,4 @@ class Bootstrap {
   }
 
 }
+

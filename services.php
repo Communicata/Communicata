@@ -9,3 +9,4 @@ $container->register('command.factory.resolver', FactoryResolver::class)
 
 $container->register('dictionary.command', CommandDictionary::class)
   ->addArgument('%namespaces%', '@command.factory.resolver');
+

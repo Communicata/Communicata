@@ -8,9 +8,13 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 interface ContainerAwareFactoryInterface extends FactoryInterface {
 
   /**
-   * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
+   * Instantiates a new instance of this factory with relevant dependencies.
    *
-   * @return mixed
+   * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
+   *   The dependency injection container.
+   *
+   * @return static
+   *   A new instance of this factory.
    */
   public static function create(ContainerInterface $container);
 

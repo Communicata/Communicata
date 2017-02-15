@@ -56,3 +56,4 @@ class HelpCommand extends CommandBase {
   }
 
 }
+
