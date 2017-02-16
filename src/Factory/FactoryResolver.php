@@ -9,6 +9,11 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class FactoryResolver implements FactoryResolverInterface {
 
   /**
+   * @var \Symfony\Component\DependencyInjection\ContainerInterface
+   */
+  protected $container;
+
+  /**
    * FactoryResolver constructor.
    *
    * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
@@ -22,7 +27,8 @@ class FactoryResolver implements FactoryResolverInterface {
    * {@inheritdoc}
    */
   public function getFactoryInstance(string $factoryClass): FactoryInterface {
-    if ($factoryClass instanceof ContainerAwareFactoryInterface) {
+    $interfaces = class_implements($factoryClass);
+    if($interfaces && in_array('Drakythe\Ember\Factory\ContainerAwareFactoryInterface', $interfaces)) {
       return $factoryClass::create($this->container);
     }
     return new $factoryClass();

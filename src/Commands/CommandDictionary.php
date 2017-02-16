@@ -20,8 +20,8 @@ class CommandDictionary implements PluginDictionaryInterface {
    *   The factory resolver.
    */
   public function __construct(\Traversable $namespaces, FactoryResolverInterface $resolver) {
-    $this->discovery = new AnnotatedPluginDiscovery($namespaces, 'Commands', '\Drakythe\Ember\Commands\CommandInterface', '\Drakythe\Ember\Annotation\Command');
-    $this->factoryClass = '\Drakythe\Ember\Factory\CommandFactory';
+    $this->discovery = new AnnotatedPluginDiscovery($namespaces, 'Commands', 'Drakythe\Ember\Commands\CommandInterface', 'Drakythe\Ember\Annotation\Command');
+    $this->factoryClass = 'Drakythe\Ember\Factory\CommandFactory';
     $this->factoryResolver = $resolver;
     $this->pluginType = 'ember_commands';
   }

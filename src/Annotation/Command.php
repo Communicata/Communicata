@@ -4,6 +4,9 @@ namespace Drakythe\Ember\Annotation;
 
 use EclipseGc\PluginAnnotation\Definition\AnnotatedPluginDefinition;
 
+/**
+ * @Annotation
+ */
 class Command extends AnnotatedPluginDefinition {
 
   /**

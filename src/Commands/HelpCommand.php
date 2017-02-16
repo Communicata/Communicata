@@ -10,7 +10,7 @@ use Drakythe\Ember\Annotation\Command;
  *   pluginId = "help",
  *   expression = "/^help$/mi",
  *   help = "",
- *   factory = "\Drakythe\Ember\Factory\HelpFactory"
+ *   factory = "Drakythe\Ember\Factory\HelpFactory"
  * )
  */
 class HelpCommand extends CommandBase {
@@ -51,8 +51,7 @@ class HelpCommand extends CommandBase {
     $response .= '```';
 
     $message->reply("A list of available commands has been sent to your Private Messages");
-    $author = $message->author->user;
-    $author->sendMessage("$response");
+    $message->author->user->sendMessage("$response");
   }
 
 }

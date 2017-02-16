@@ -43,7 +43,7 @@ class EightBallCommand extends CommandBase {
 
     $choice = rand(0, count($answers) - 1);
 
-    return $answers[$choice];
+    $message->reply($answers[$choice]);
   }
 
 }
