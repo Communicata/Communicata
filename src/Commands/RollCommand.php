@@ -9,7 +9,7 @@ use Drakythe\Ember\Annotation\Command;
 /**
  * @Command(
  *   pluginId = "roll",
- *   expression = "/^roll: (\dd\d+[\+*\d]*)/mi",
+ *   expression = "/^roll: (\d+d\d+[\+*\d]*)/mi",
  *   help = "roll: <dice and modifier>: Returns results of <dice>. Example 'roll: 2d4+6'"
  * )
  */

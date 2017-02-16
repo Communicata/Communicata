@@ -2,11 +2,14 @@
 
 namespace Drakythe\Ember\Discord;
 
+use Discord\Parts\User\Member;
+
 class DiscordGuildMember {
 
-  public function onGuildMemberAdd($info) {
+  public function onGuildMemberAdd(Member $member) {
+    print_r($member);
     echo "New user joined";
-    $user = $info->user;
+    $user = $member->user;
     print_r($user);
 
     //stuff here
