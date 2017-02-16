@@ -14,7 +14,7 @@ $container->setParameter('autoloader', $autoloader);
 // Extract namespaces to find any available plugins.
 $container->setParameter('namespaces', Namespaces::extractNamespaces($autoloader));
 
-Bootstrap::collectServices($container, $container->get('%namespaces%'));
+Bootstrap::collectServices($container, $container->getParameter('namespaces'));
 
 $commands = [];
 /** @var Drakythe\Ember\Commands\CommandDictionary $commandDictionary */
