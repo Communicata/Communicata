@@ -21,4 +21,6 @@ $container->register('discord.ready', DiscordReady::class)
 $container->register('discord.message', DiscordMessage::class)
   ->addArgument(new Reference('dictionary.command'));
 
-$container->register('discord.guild.member', DiscordGuildMember::class);
+$container->register('discord.guild.member', DiscordGuildMember::class)
+  ->addArgument('%discord%')
+  ->addArgument('%configuration%');
