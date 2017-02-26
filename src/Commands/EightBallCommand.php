@@ -8,7 +8,7 @@ use Drakythe\Ember\Annotation\Command;
 /**
  * @Command(
  *   pluginId = "eight_ball",
- *   expression = "/^8ball: [\w\s]+\?$/mi",
+ *   expression = "/^8ball: ([\w\s][,]*)+\?$/mi",
  *   help = "8ball: Try your luck and ask the bot a question. Example: '8ball: Should I order takeout?'"
  * )
  */
