@@ -18,6 +18,9 @@ Bootstrap::collectServices($container, $container->getParameter('namespaces'));
 $discord = new \Discord\Discord([
     'token' => $container->getParameter('configuration')['token'],
 ]);
+
+$container->setParameter('discord', $discord);
+
 $discord->on('ready', [$container->get('discord.ready'), 'onReady']);
 $discord->on('message', [$container->get('discord.message'), 'onMessage']);
 $discord->on(Event::GUILD_MEMBER_ADD, [$container->get('discord.guild.member'), 'onGuildMemberAdd']);
